@@ -1,6 +1,6 @@
 import { Response, Request } from 'miragejs';
 import { handleErrors } from '../server';
-import { Diary } from '../../../Interfaces/dairy.interface';
+import { Diary } from '../../../Interfaces/diary.interface';
 import { Entry } from '../../../Interfaces/entry.interface';
 import dayjs from 'dayjs';
 import { User } from '../../../Interfaces/user.interface';

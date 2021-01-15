@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from './rootReducer';
 
-// const Auth = lazy(() => import('./features/auth/Auth'));
-// const Home = lazy(() => import('./features/home/Home'));
+const Auth = lazy(() => import('./features/auth/Auth'));
+const Home = lazy(() => import('./features/home/Home'));
 
 const App: FC = () => {
   const isLoggedIn = useSelector(
@@ -15,7 +15,7 @@ const App: FC = () => {
       <Routes>
         <Route path="/">
           <Suspense fallback={<p>Loading...</p>}>
-            {/* {isLoggedIn ? <Home /> : <Auth />} */}
+            {isLoggedIn ? <Home /> : <Auth />}
           </Suspense>
         </Route>
       </Routes>
